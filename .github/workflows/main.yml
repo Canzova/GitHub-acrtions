@@ -1,0 +1,16 @@
+name: My first pipeline
+
+on:
+  workflow-dispatch:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hellow world
+      run: eche"Hello World"
+    
