@@ -1,17 +1,41 @@
+# Workflow name as displayed in the GitHub Actions tab
 name: My first pipeline
 
+# Triggers that specify when the workflow should execute
 on:
+  # Allows manual triggering from the GitHub Actions UI or API
   workflow_dispatch:
 
+  # Automatically triggers on code push events
   push:
+    # Target branches that trigger this workflow on push
     branches:
       - dev
       - main
 
+# Defines the jobs to be executed in this workflow
 jobs:
+  # Unique job identifier
   firstJob:
+    # Specifies the runner OS environment (Ubuntu latest)
     runs-on: ubuntu-latest
 
+    # Sequential list of tasks/steps to run in this job
     steps:
+      # Step description
       - name: Print hello world
+        # Shell command to execute
         run: echo "Hello World"
+
+  # Second job identifier
+  secondJob:
+    # Specifies the runner OS environment (Ubuntu latest)
+    runs-on: ubuntu-latest
+
+    # Sequential list of tasks/steps to run in this job
+    steps:
+      # Step description
+      - name: Print goodbye world
+        # Shell command to execute
+        run: echo "Goodbye World"
+
