@@ -1,7 +1,8 @@
 name: My first pipeline
 
 on:
-  workflow-dispatch:
+  workflow_dispatch:
+
   push:
     branches:
       - dev
@@ -10,7 +11,7 @@ on:
 jobs:
   firstJob:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print hellow world
-      run: eche"Hello World"
-    
+      - name: Print hello world
+        run: echo "Hello World"
