@@ -13,7 +13,7 @@ on:
       - dev
       - main
 
-# Defines the jobs to be executed in this workflow
+# Defines the jobs to be executed in this workflow parallay
 jobs:
   # Unique job identifier
   firstJob:
